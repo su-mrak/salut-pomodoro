@@ -7,13 +7,13 @@ import SettingsContext from './SettingsContext';
 
 
 
-function App() {
+function Pomodoro() {
   const [showSettings, setShowSettings] = useState(false);
   const [workMinutes, setWorkMinutes] = useState(45);
   const [breakMinutes, setBreakMinutes] = useState(5);
 
   return (
-    <main>
+    <div>
       <SettingsContext.Provider value={{
         showSettings,
         setShowSettings,
@@ -26,8 +26,8 @@ function App() {
         { showSettings ? <Settings /> : <Timer />}
       </SettingsContext.Provider>
       
-    </main>
+    </div>
   );
 }
 
-export default App;
+export default Pomodoro;
